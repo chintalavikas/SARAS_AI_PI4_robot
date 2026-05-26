@@ -88,14 +88,8 @@ python saras_ai.py
 
 ## Robot Images
 
-Add your robot images inside:
-images/
+![alt text](<saras architecture.png>) ![alt text](<saras robot.png>)/
 
----
-
-## Demo Video
-
-Add your YouTube demo link here.
 
 ---
 
