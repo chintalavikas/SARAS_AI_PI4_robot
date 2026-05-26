@@ -47,6 +47,11 @@ SARAS_AI_PI4/
     │   ├── stt.py
     │   ├── tts.py
     │   └── llm.py
+    │   ├──  ultrasonic.py
+    │   ├──  servo.py
+    │   ├──  motors.py
+    │   └──  eyes.py
+    │
     │
     ├── images/
     ├── audio/
