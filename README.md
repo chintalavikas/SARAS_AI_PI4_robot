@@ -79,7 +79,104 @@ pip install -r requirements.txt
 ```bash
 python saras_ai.py
 ```
+### Installation commands
 
+## Update Raspberry Pi
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+# Install Python & Pip
+
+```bash
+sudo apt install python3 python3-pip -y
+```
+
+---
+
+# Install Audio Dependencies
+
+```bash
+sudo apt install portaudio19-dev ffmpeg espeak-ng -y
+```
+
+---
+
+# Install Ollama (LLM)
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+## Run TinyLLaMA
+
+```bash
+ollama run tinyllama
+```
+
+## Run Deepseek-Coder
+
+```bash
+ollama run deepseek-coder:1.3b
+```
+
+---
+# Install STT (Vosk)
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt install python3-pip portaudio19-dev -y
+```
+
+```bash
+pip install vosk sounddevice
+```
+
+---
+
+# Install TTS (Coqui TTS)
+
+```bash
+pip install TTS
+```
+
+
+---
+
+## Additional Compatibility Packages
+
+```bash
+pip install bnnumerizer bnunicodenormalizer gruut[de,es,fr]==2
+```
+
+---
+
+# Install Project Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Run SARAS AI
+
+```bash
+python saras_ai.py
+```
+
+---
+
+# Note
+
+Large AI models are not included in this repository.
+Please download them manually using the commands above.
 ---
 
 ## AI Features
@@ -94,6 +191,7 @@ python saras_ai.py
 ## Robot Images
 
 ![alt text](<saras architecture.png>) ![alt text](<saras robot.png>)/
+
 
 
 ---
