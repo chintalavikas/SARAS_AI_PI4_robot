@@ -1,6 +1,6 @@
-vosk
+vosk stt
 sounddevice
-pyttsx3
+coqui tts
 flask
 requests
 gpiozero
