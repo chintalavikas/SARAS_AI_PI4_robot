@@ -4,29 +4,17 @@ An offline AI voice assistant robot built using Raspberry Pi 4, Python, Vosk, Ol
 
 ---
 
-## Features
+## 🤖 AI & Software Stack
 
-- Offline voice assistant
-- Speech-to-Text (STT)
-- Text-to-Speech (TTS)
-- AI chatbot using LLM
-- Animated robot eyes using HTML/CSS
-- Raspberry Pi 4 support
-- Voice interaction
-- Modular Python architecture
-
----
-
-## Technologies Used
-
-- Python
-- Raspberry Pi 4
-- Vosk Speech Recognition
-- Ollama
-- HTML/CSS/JavaScript
-- pyttsx3
-- Flask
-
+| Technology | Purpose |
+|------------|----------|
+| Faster-Whisper | Speech-to-Text (STT) |
+| Piper TTS | Text-to-Speech (TTS) |
+| Ollama + qwen2.5:0.5b | Offline AI Brain |
+| Groq API + Llama 3 | Online AI Brain (Fast Responses) |
+| Python 3 | Main Programming Language |
+| Flask | Robot Eyes Web Interface |
+| HTML/CSS/JavaScript | Animated Robot Eyes |
 ---
 
 ## Project Structure
@@ -124,18 +112,30 @@ ollama run deepseek-coder:1.3b
 ```
 
 ---
-# Install STT (Vosk)
+# 🎤 Install STT (Faster-Whisper)
+
+## Update System
 
 ```bash
 sudo apt update
 ```
 
-```bash
-sudo apt install python3-pip portaudio19-dev -y
-```
+## Install Dependencies
 
 ```bash
-pip install vosk sounddevice
+sudo apt install python3-pip ffmpeg -y
+```
+
+## Install Faster-Whisper
+
+```bash
+pip install faster-whisper
+```
+
+## Verify Installation
+
+```bash
+python3 -c "from faster_whisper import WhisperModel; print('Faster-Whisper installed successfully!')"
 ```
 
 ---
@@ -146,6 +146,42 @@ pip install vosk sounddevice
 pip install TTS
 ```
 
+# 🌐 Install Online AI Brain (Groq + Llama 3)
+
+## Install Groq Python SDK
+
+```bash
+pip install groq
+```
+
+## Get a Groq API Key
+
+1. Create an account at Groq Cloud
+2. Generate an API key
+3. Store it securely
+
+## Set API Key (Linux/Raspberry Pi)
+
+```bash
+export GROQ_API_KEY="your_api_key_here"
+```
+
+## Verify Installation
+
+```python
+from groq import Groq
+
+client = Groq(api_key="your_api_key_here")
+
+response = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[
+        {"role": "user", "content": "Hello"}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
 
 ---
 
@@ -185,6 +221,7 @@ Please download them manually using the commands above.
 - Local AI processing
 - Robot eye animation
 - Interactive assistant behavior
+- Manual mode
 
 ---
 
