@@ -1,6 +1,6 @@
 # SARAS AI PI4 Robot
 
-An offline AI voice assistant robot built using Raspberry Pi 4, Python, Vosk, Ollama, TTS/STT, and animated HTML eyes.
+An offline AI voice assistant robot built using Raspberry Pi 4, Python,Faster-Whisper , Ollama, TTS/STT, and animated HTML eyes.
 
 ---
 
